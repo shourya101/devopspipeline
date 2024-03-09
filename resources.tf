@@ -48,7 +48,7 @@ resource "aws_instance" "mygfgweb" {
   instance_type = var.instanceType
   subnet_id   = aws_subnet.mygfgsubnet.id
   tags = {
-    Name = "${var.instanceTagName}-${count.index}"
+    Name = "${var.instanceTagName}"
   }
   key_name = var.keyname
   vpc_security_group_ids = [aws_security_group.webserver_sg.id]
