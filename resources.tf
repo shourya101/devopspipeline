@@ -53,7 +53,6 @@ resource "aws_instance" "mygfgweb" {
   key_name = var.keyname
   vpc_security_group_ids = [aws_security_group.webserver_sg.id]
   depends_on = [aws_key_pair.mykey]
-  count= 1
   provisioner "local-exec" {
     command = "echo 'resource exectued succesfully'"
   }
