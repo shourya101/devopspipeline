@@ -50,7 +50,7 @@ resource "aws_instance" "mygfgweb" {
   tags = {
     Name = "${var.instanceTagName}"
   }
-  key_name = var.keyname
+  key_name = aws_key_pair.mykey.key_name
   vpc_security_group_ids = [aws_security_group.webserver_sg.id]
   depends_on = [aws_key_pair.mykey]
   provisioner "local-exec" {
@@ -59,7 +59,7 @@ resource "aws_instance" "mygfgweb" {
 }
 
 resource "aws_key_pair" "mykey" {
-  key_name   = var.keyname
+  key_name   = "testkeygfg"
   public_key = file("mykey.pem.pub")
 }
 
