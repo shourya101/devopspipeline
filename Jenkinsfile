@@ -41,7 +41,7 @@ pipeline {
         }
         stage("Configure k8s cluster on the created infrastructure "){
             steps{
-                sh "chmod 400 mykey"
+                sh "chmod 400 mykey.pem"
                 sh "ansible-playbook k8s_cluster.yml"
                 echo "K8s minikube cluster configured succesfully!"
             }
