@@ -60,7 +60,7 @@ resource "aws_instance" "mygfgweb" {
 
 resource "aws_key_pair" "mykey" {
   key_name   = var.keyname
-  public_key = file("mykey.pub")
+  public_key = file("mykey.pem.pub")
 }
 
 resource "aws_security_group" "webserver_sg" {
