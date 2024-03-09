@@ -51,9 +51,9 @@ resource "aws_instance" "mygfgweb" {
     Name = "${var.instanceTagName}-${count.index}"
   }
   key_name = var.keyname
-  vpc_security_group_ids = [aws_security_group.gfg-web-sg.id]
+  vpc_security_group_ids = [aws_security_group.webserver_sg.id]
   depends_on = [aws_key_pair.mykey]
-  count= 1
+  count= 1webserver_sg
   provisioner "local-exec" {
     command = "echo 'resource exectued succesfully'"
   }
@@ -64,7 +64,7 @@ resource "aws_key_pair" "mykey" {
   public_key = file("mykey.pub")
 }
 
-resource "aws_security_group" "webserver_sg" {
+resource "aws_security_group" "" {
   name        = var.sg_name
   description = "Webserver Security Group Allow port 80"
   vpc_id      = aws_vpc.myvpc.id
