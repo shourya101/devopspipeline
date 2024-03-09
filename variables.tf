@@ -18,7 +18,7 @@ variable "x"{
 }
 
 variable "keyname"{
-    default = "mygfgkey"
+    default = "mykey"
 }
 
 variable "sg_name"{
