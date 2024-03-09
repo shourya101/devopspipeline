@@ -64,7 +64,7 @@ resource "aws_key_pair" "mykey" {
   public_key = file("mykey.pub")
 }
 
-resource "aws_security_group" "" {
+resource "aws_security_group" "webserver_sg" {
   name        = var.sg_name
   description = "Webserver Security Group Allow port 80"
   vpc_id      = aws_vpc.myvpc.id
