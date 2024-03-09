@@ -46,12 +46,12 @@ pipeline {
                 echo "K8s minikube cluster configured succesfully!"
             }
         }
-        stage("Configure Monitoring Tool"){
-            steps{
-                sh "ansible-playbook prometheus-grafana.yml"
-                echo "Monitoring tool configured succesfully!"
-            }
-        }
+        // stage("Configure Monitoring Tool"){
+        //     steps{
+        //         sh "ansible-playbook prometheus-grafana.yml"
+        //         echo "Monitoring tool configured succesfully!"
+        //     }
+        // }
         stage("Deploy the Webserver"){
             steps{
                 sh "ansible-playbook deployDeployment.yml"
