@@ -1,13 +1,13 @@
 pipeline {
     agent {label "ec2"}
     stages {
-        stage('Git') {
-            steps {
-                echo 'Downoading..'
-                git 'https://github.com/Trainersudhanshu/devopspipeline.git'
-                echo "Code Downloaded Succesfully!"
-            }
-        }
+        // stage('Git') {
+        //     steps {
+        //         echo 'Downoading..'
+        //         git 'https://github.com/Trainersudhanshu/devopspipeline.git'
+        //         echo "Code Downloaded Succesfully!"
+        //     }
+        // }
         stage("Setup Ansible"){
             steps{
                 echo "Testing was already done succesfully via Github Workflows"
