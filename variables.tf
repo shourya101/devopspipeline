@@ -1,11 +1,6 @@
 variable "instanceType"{
-type = string
-default = "t2.medium"
-}
-
-variable "x"{
-    type = string
-    default = "hello"
+    type= string
+    default = "t2.micro"
 }
 
 variable "instanceTagName"{
@@ -14,9 +9,23 @@ variable "instanceTagName"{
 }
 
 variable "amiID"{
-    default ="ami-0a0f1259dd1c90938"
+    type = string
+    default = "ami-0449c34f967dbf18a"
+}
+
+variable "x"{
+   default =5
+}
+
+variable "keyname"{
+    default = "mygfgkey"
 }
 
 variable "sg_name"{
-    default = "WebserverSg"
+    default = "mygfgterraformsg"
+}
+
+variable "sg_allowed_port"{
+    type = list
+    default = [80,8080,9000]
 }
