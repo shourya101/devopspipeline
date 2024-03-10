@@ -63,7 +63,7 @@ Simarly we can do for Grafana
 
 - `#sudo minikube service grafana-ext` - Get the NodePort
 - `#sudo socat TCP4-LISTEN:3000,fork,su=nobody TCP4:<minikube IP>:<Node Port> &`
-
+- `kubectl get secret --namespace default grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo` - Get the Grafana Secret for Authentication
 Get the Grafana dashboard at port no 3000 on your server
 
 ### Step 13 Create Grafana Dashboard: 
