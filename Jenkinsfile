@@ -1,13 +1,6 @@
 pipeline {
     agent {label "ec2"}
     stages {
-        // stage('Git') {
-        //     steps {
-        //         echo 'Downoading..'
-        //         git 'https://github.com/Trainersudhanshu/devopspipeline.git'
-        //         echo "Code Downloaded Succesfully!"
-        //     }
-        // }
         stage("Setup Ansible"){
             steps{
                 echo "Testing was already done succesfully via Github Workflows"
@@ -27,8 +20,6 @@ pipeline {
                     }
                 }
             sh "terraform --version"
-            //sh "aws configure set aws_access_key_id "
-            //sh  "aws configure set aws_secret_access_key "
             }
         }
         stage("Create Infrastructure for PROD"){
