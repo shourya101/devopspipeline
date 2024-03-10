@@ -13,7 +13,7 @@
       register: deployment_check
 
     - name: Run Deployment or Rollout
-      command: "kubectl create -f deployment.yml"
+      command: "kubectl apply -f deployment.yml"
       when: deployment_check.rc != 0  # Deployment doesn't exist
       ignore_errors: true
 
