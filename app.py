@@ -8,7 +8,7 @@ def create_app():
 
     @app.route('/')
     def home():
-        return quote('My Flask App')
+        return quote('HurrayLastClass')
 
     return app
 
