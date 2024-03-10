@@ -76,3 +76,6 @@ Get the Grafana dashboard at port no 3000 on your server
 
 Connect with me on LinkedIn in any kind of challenges - [Linkedin](https://www.linkedin.com/in/sudhanshu--pandey/)
 
+- Pipeline Architecture - <img width="946" alt="image" src="https://github.com/Trainersudhanshu/devopspipeline/assets/124223047/6e27f914-759a-43f0-9ac3-b0a3d5b30f39">
+
+
