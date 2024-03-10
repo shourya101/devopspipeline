@@ -8,7 +8,7 @@ def create_app():
 
     @app.route('/')
     def home():
-        return quote('HurrayLastClass')
+        return quote('HurrayLastClassProdDeployment')
 
     return app
 
